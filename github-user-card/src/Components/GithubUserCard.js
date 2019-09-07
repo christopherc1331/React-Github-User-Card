@@ -26,7 +26,7 @@ const GithubUserdiv = ({
     <ListGroup className="list-group-flush">
       <ListGroupItem>Joined in {joined}</ListGroupItem>
       <ListGroupItem>{publicRepos} Public Repos</ListGroupItem>
-      <ListGroupItem># Of Followers: {followers}</ListGroupItem>
+      <ListGroupItem>Followers: {followers}</ListGroupItem>
     </ListGroup>
     <Card.Body>
       <Card.Link href={myBlog}>My Blog</Card.Link>
