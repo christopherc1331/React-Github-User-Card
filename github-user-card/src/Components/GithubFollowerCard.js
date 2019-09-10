@@ -5,11 +5,11 @@ import Button from "react-bootstrap/Button";
 const GithubFollowerCard = ({ avatar, name, githubLink }) => (
   <Card
     style={{
-      width: "13rem"
+      width: "15rem"
     }}
   >
     <Card.Header>{name}</Card.Header>
-    <Card.Img variant="bottom" src={avatar} />
+    <Card.Img src={avatar} />
     <Card.Body>
       <Button href={githubLink} variant="primary">
         Github Profile

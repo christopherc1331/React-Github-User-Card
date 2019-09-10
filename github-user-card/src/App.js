@@ -5,7 +5,7 @@ import GithubFollowerCard from "./Components/GithubFollowerCard.js";
 
 class App extends React.Component {
   state = {
-    inputText: "",
+    inputUserName: "",
     githubUserName: "christopherc1331",
     githubUser: [],
     githubFollowers: []
@@ -23,14 +23,14 @@ class App extends React.Component {
   }
 
   changeHandler = event => {
-    this.setState({ inputText: event.target.value });
+    this.setState({ [event.target.name]: event.target.value });
   };
 
   submitHandler = event => {
     event.preventDefault();
     console.log("submitted");
-    this.setState({ githubUserName: this.state.inputText });
-    this.setState({ inputText: "" });
+    this.setState({ githubUserName: this.state.inputUserName });
+    this.setState({ inputUserName: "" });
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -60,10 +60,10 @@ class App extends React.Component {
                 Enter Github Username
               </label>
               <input
-                name="userName"
+                name="inputUserName"
                 type="text"
                 placeholder="Enter Github Username"
-                value={this.state.inputText}
+                value={this.state.inputUserName}
                 onChange={this.changeHandler}
               />
               <button>Submit</button>
